@@ -28,7 +28,7 @@ function sendForm(form) {
     const formData = new FormData(form);
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzyACCpMpqhNkwzsExWSbw1dpAAAB46NyocqohxFp95tBHJqQnSGJTstpL8J5-h5ajvJA/exec';
 
-    showToast('⏳ Отправка сообщения...', false, 7000);
+    showToast('⏳ Sending message…', false, 7000);
 
     function resetSliders() {
         const slider = document.getElementById('slider');
