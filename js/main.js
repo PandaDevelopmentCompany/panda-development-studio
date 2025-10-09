@@ -48,13 +48,13 @@ function sendForm(form) {
 
     fetch(scriptURL, { method: 'POST', body: new URLSearchParams(payload) })
         .then(() => {
-            showToast('✅ Ваше сообщение успешно отправлено');
+            showToast('✅ Your message has been sent successfully.');
             form.reset();
             resetSliders();
         })
         .catch(err => {
             console.warn(err);
-            showToast('❌ Проблемы с подключением. Попробуйте, пожалуйста, позже!', true);
+            showToast('❌ Connection issues. Please try again later!', true);
         });
 }
 
@@ -68,7 +68,7 @@ if (sendButton) sendButton.addEventListener("click", e => {
     const phone = form.querySelector('[name="phone"]');
 
     if (!name.value.trim() || !phone.value.trim()) {
-        showToast('❌ Пожалуйста, заполните обязательные поля', true);
+        showToast('❌ Please fill in all required fields.', true);
         return; 
     }
 
